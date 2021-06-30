@@ -7,47 +7,43 @@
 
 import SwiftUI
 
-enum Priority {
-    case HIGH
-    case MEDIUM
-    case LOW
-}
-
 struct DailyScrum : Identifiable {
     let id: UUID
     var title: String
     var attendees: [String]
     var lengthInMinutes: Int
-    var priority: Priority
+    var color: Color
     
-    var color: Color {
-        switch priority {
-        case .HIGH:
-            return .red
-        case .MEDIUM:
-            return .yellow
-        default:
-            return .green
-        }
-    }
-    
-    init(id: UUID = UUID(), title: String, attendees: [String], lengthInMinutes: Int, priority: Priority) {
+    init(id: UUID = UUID(), title: String, attendees: [String], lengthInMinutes: Int, color: Color) {
         self.id = id
         self.title = title
         self.attendees = attendees
         self.lengthInMinutes = lengthInMinutes
-        self.priority = priority
+        self.color = color
     }
 }
 
 extension DailyScrum {
     static var testData: [DailyScrum] {
         [
-            DailyScrum(title: "Design", attendees: ["Client", "BA", "SA", "Designer", "Android Developer", "iOS Developer"], lengthInMinutes: 15, priority: .LOW),
-            DailyScrum(title: "Development", attendees: ["Android Developer", "iOS Developer"], lengthInMinutes: 5, priority: .MEDIUM),
-            DailyScrum(title: "SIT", attendees: ["SA", "Designer", "Android Developer", "iOS Developer"], lengthInMinutes: 3, priority: .LOW),
-            DailyScrum(title: "UAT", attendees: ["QA", "SA"], lengthInMinutes: 10, priority: .MEDIUM),
-            DailyScrum(title: "Deployment", attendees: ["SA", "Android Developer", "iOS Developer", "Admin", "QA"], lengthInMinutes: 1, priority: .HIGH)
+            DailyScrum(title: "Design", attendees: ["Client", "BA", "SA", "Designer", "Android Developer", "iOS Developer"], lengthInMinutes: 15, color: .random),
+            DailyScrum(title: "Development", attendees: ["Android Developer", "iOS Developer"], lengthInMinutes: 5, color: .random),
+            DailyScrum(title: "SIT", attendees: ["SA", "Designer", "Android Developer", "iOS Developer"], lengthInMinutes: 3, color: .random),
+            DailyScrum(title: "UAT", attendees: ["QA", "SA"], lengthInMinutes: 10, color: .random),
+            DailyScrum(title: "Deployment", attendees: ["SA", "Android Developer", "iOS Developer", "Admin", "QA"], lengthInMinutes: 1, color: .random)
         ]
+    }
+}
+
+extension DailyScrum {
+    struct Data {
+        var title: String = ""
+        var attendees: [String] = []
+        var lengthInMinutes: Double = 1
+        var color: Color = .random
+    }
+    
+    var data: Data {
+        return Data(title: title, attendees: attendees, lengthInMinutes: Double(lengthInMinutes), color: color)
     }
 }
