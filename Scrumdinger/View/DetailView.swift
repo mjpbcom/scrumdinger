@@ -43,6 +43,21 @@ struct DetailView: View {
                         .accessibilityValue(Text(attendee))
                 }
             }
+            
+            Section(header: Text("History")) {
+                if scrum.history.isEmpty {
+                    Label("No meetings yet", systemImage: "calendar.badge.exclamationmark")
+                } else {
+                    ForEach(scrum.history) { history in
+                        HStack {
+                            Image(systemName: "calendar")
+                            Text(history.date, style: .date)
+                            Spacer()
+                            Text(history.date, style: .time)
+                        }
+                    }
+                }
+            }
         }
         .listStyle(InsetGroupedListStyle())
         .navigationTitle(scrum.title)
@@ -68,7 +83,7 @@ struct DetailView: View {
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            DetailView(scrum: .constant(DailyScrum.testData[0]))
+            DetailView(scrum: .constant(DailyScrum.testData[4]))
         }
         
     }
