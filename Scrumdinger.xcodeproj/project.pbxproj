@@ -119,8 +119,8 @@
 				2D00F4D2268C281B0027A7AA /* Models */,
 				2D00F4D5268C2A910027A7AA /* View */,
 				2DCC2A3F268B15B400D7251F /* ScrumdingerApp.swift */,
-				2DCC2A43268B15B700D7251F /* Assets.xcassets */,
 				2DADA3A9268D8F1F00037697 /* Resources */,
+				2DCC2A43268B15B700D7251F /* Assets.xcassets */,
 				2DCC2A48268B15B700D7251F /* Info.plist */,
 				2DCC2A45268B15B700D7251F /* Preview Content */,
 			);

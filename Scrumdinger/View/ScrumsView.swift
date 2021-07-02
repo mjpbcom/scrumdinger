@@ -44,9 +44,9 @@ struct ScrumsView: View {
                             isPresented = false
                         })
             }
-            .onChange(of: scenePhase) { phase in
-                if phase == .inactive { saveAction() }
-            }
+        }
+        .onChange(of: scenePhase) { phase in
+            if phase == .inactive { saveAction() }
         }
     }
     
