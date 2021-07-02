@@ -24,6 +24,7 @@
 		2DCC2A44268B15B700D7251F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DCC2A43268B15B700D7251F /* Assets.xcassets */; };
 		2DCC2A47268B15B700D7251F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DCC2A46268B15B700D7251F /* Preview Assets.xcassets */; };
 		2DD09B4F268EA71A00FFF832 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD09B4E268EA71A00FFF832 /* History.swift */; };
+		2DD09B51268EB17E00FFF832 /* ScrumData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD09B50268EB17E00FFF832 /* ScrumData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		2DCC2A46268B15B700D7251F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2DCC2A48268B15B700D7251F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DD09B4E268EA71A00FFF832 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		2DD09B50268EB17E00FFF832 /* ScrumData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				2DADA3AE268D90DC00037697 /* ScrumTimer.swift */,
 				2D19586F268DB0C2002AD913 /* AVPlayer+Ding.swift */,
 				2DD09B4E268EA71A00FFF832 /* History.swift */,
+				2DD09B50268EB17E00FFF832 /* ScrumData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				2DD09B4F268EA71A00FFF832 /* History.swift in Sources */,
 				2D3E0A68268C5C0900D67588 /* EditView.swift in Sources */,
 				2D195870268DB0C2002AD913 /* AVPlayer+Ding.swift in Sources */,
+				2DD09B51268EB17E00FFF832 /* ScrumData.swift in Sources */,
 				2DADA3A8268D7D5D00037697 /* MeetingHeaderView.swift in Sources */,
 				2D00F4D7268C2ABB0027A7AA /* CardView.swift in Sources */,
 				2DADA3B1268D979100037697 /* MeetingFooterView.swift in Sources */,

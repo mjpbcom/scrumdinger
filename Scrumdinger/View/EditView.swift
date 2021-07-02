@@ -13,6 +13,7 @@ struct EditView: View {
     
     var body: some View {
         List {
+// MARK: Meeting Info
             Section(header: Text("Meeting Info")) {
                 TextField("Title", text: $scrumData.title)
                 HStack {
@@ -27,7 +28,7 @@ struct EditView: View {
                 ColorPicker("Color", selection: $scrumData.color)
                     .accessibilityLabel(Text("Color picker"))
             }
-            
+// MARK: Attendees
             Section(header: Text("Attendees")) {
                 ForEach(scrumData.attendees, id: \.self) { attendee in
                     Text(attendee)

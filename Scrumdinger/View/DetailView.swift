@@ -14,6 +14,7 @@ struct DetailView: View {
     
     var body: some View {
         List {
+// MARK: Meeting Info
             Section(header: Text("Meeting Info")) {
                 NavigationLink(destination: MeetingView(scrum: $scrum)) {
                     Label("Start Meeting", systemImage: "timer")
@@ -36,6 +37,7 @@ struct DetailView: View {
                 .accessibilityElement(children: .ignore)
             }
             
+// MARK: Attendees
             Section(header: Text("Attendees")) {
                 ForEach(scrum.attendees, id: \.self) { attendee in
                     Label(attendee, systemImage: "person")
@@ -44,6 +46,7 @@ struct DetailView: View {
                 }
             }
             
+// MARK: History
             Section(header: Text("History")) {
                 if scrum.history.isEmpty {
                     Label("No meetings yet", systemImage: "calendar.badge.exclamationmark")
@@ -66,6 +69,7 @@ struct DetailView: View {
             data = scrum.data
         }))
         .fullScreenCover(isPresented: $isPresented) {
+// MARK: Edit Scrum
             NavigationView {
                 EditView(scrumData: $data)
                     .navigationTitle(scrum.title)
