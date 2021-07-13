@@ -22,8 +22,7 @@ struct MeetingView: View {
                 MeetingHeaderView(secondsElapsed: scrumTimer.secondsElapsed, secondsRemaining: scrumTimer.secondsRemaining, scrumColor: scrum.color)
                 
                 // circle timer
-                Circle()
-                    .strokeBorder(lineWidth: 25, antialiased: true)
+                MeetingTimerView(speakers: scrumTimer.speakers, scrumColor: scrum.color)
                 
                 // progress control
                 MeetingFooterView(speakers: scrumTimer.speakers, skipAction: scrumTimer.skipSpeaker)
