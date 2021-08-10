@@ -31,7 +31,7 @@ struct ScrumsView: View {
             Image(systemName: "plus")
         })
         .sheet(isPresented: $isPresented) {
-// MARK: Add Scrum
+            // MARK: Add Scrum
             NavigationView {
                 EditView(scrumData: $newScrumData)
                     .navigationBarItems(
